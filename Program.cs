@@ -1,4 +1,19 @@
-﻿char[,] InitialiserTableauEtoile()
+﻿
+void AfficherPlateau(char[,] plateau)
+{
+    for (int i = 0; i < plateau.GetLength(0); i++)
+    {
+        for (int j = 0; j < plateau.GetLength(1) - 1; j++)
+        {
+            plateau[i, j] = '*';
+            Console.Write($"{plateau[i, j]} ");
+        }
+        plateau[i, plateau.GetLength(1) - 1] = '*';
+        Console.WriteLine(plateau[i, plateau.GetLength(1) - 1]);
+    }
+}
+
+void InitialiserTableauEtoile()
 // Initialiser un plateau de taille nbUplets*nbCartesParUplet avec toutes les cartes cachées
 {
     Console.Write(" Combien de cartes par uplets voulez-vous ? ");
@@ -7,12 +22,15 @@
     int nbUplets = Convert.ToInt32(Console.ReadLine()!);
     char[,] plateaucache = new char[nbCartesParUplet, nbUplets];
     for (int i = 0; i < nbCartesParUplet; i++)
-        for (int j = 0; i < nbUplets - 1; j++)
+    {
+        for (int j = 0; j < nbUplets - 1; j++)
             plateaucache[i, j] = '*';
-    return plateaucache;
-
+        plateaucache[i, nbUplets - 1] = '*';
+    }
+    AfficherPlateau(plateaucache);
 }
 
+InitialiserTableauEtoile();
 
 char GenererCaractereAleatoire()
 //Générer aléatoirement un carctère entre ‘a’ et ‘z’, entre ‘A’ et ‘Z’, et/ou entre ‘0’ et ‘9’
@@ -41,7 +59,7 @@ char GenererCaractereAleatoire()
     return listCaracteres[cIndex];
 }
 
-Console.WriteLine(GenererCaractereAleatoire());
+
 
 
 
