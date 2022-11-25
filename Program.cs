@@ -16,7 +16,7 @@
 
         if(doubleCache[coordonnee[0],coordonnee[1]] =! doubleCache[ancienCoordonnee[0],ancienCoordonnee[1]])
         {
-            Echec(coordonnee, ancienCoordonnee);  // configurer fonction echec
+            Echec(coordonnee, doubleVisible);  // configurer fonction echec
         }
 
         i++;
