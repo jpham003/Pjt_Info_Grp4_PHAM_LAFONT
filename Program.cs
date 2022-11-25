@@ -32,6 +32,8 @@ char GenererCaractereAleatoire()
     return listCaracteres[cIndex];
 }
 
+fffff
+
 
 
 
