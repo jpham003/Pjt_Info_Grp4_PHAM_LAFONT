@@ -1,4 +1,4 @@
-﻿void ChoixCarte(int[] tab)
+﻿void ChoixCarte(int[] tab, char[,]doubleCache, char[,]doubleVisible)
 {
     int s=0;
     do{
