@@ -13,7 +13,7 @@
         //ancienCoordonnee[0]= coordonnee[0];
         //ancienCoordonnee[1] = coordonnee[1];
         
-        ChoixCarte(i,coordonnee, doubleCache, doubleVisible);
+        ChoixCarte(s,coordonnee, doubleCache, doubleVisible);
         doubleVisible[coordonnee[s],coordonnee[s+1]] = doubleCache[coordonnee[s],coordonnee[s+1]];
         MiseAJourTableau(doubleVisible);
 
