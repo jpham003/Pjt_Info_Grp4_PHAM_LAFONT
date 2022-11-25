@@ -8,14 +8,14 @@
     //ChoixCarte(1, coordonnee, doubleCache, doubleVisible);
     while(i <= n && perdu == false)
     {
-        doubleVisible[coordonnee[0],coordonnee[1]] = doubleCache[coordonnee[0],coordonnee[1]];
-        MiseAJourTableau(doubleVisible);
+        //doubleVisible[coordonnee[0],coordonnee[1]] = doubleCache[coordonnee[0],coordonnee[1]];
+        //MiseAJourTableau(doubleVisible);
         //ancienCoordonnee[0]= coordonnee[0];
         //ancienCoordonnee[1] = coordonnee[1];
         
         ChoixCarte(s,coordonnee, doubleCache, doubleVisible);
         doubleVisible[coordonnee[s],coordonnee[s+1]] = doubleCache[coordonnee[s],coordonnee[s+1]];
-        MiseAJourTableau(doubleVisible);
+        AfficherPlateau(doubleVisible);
 
         if(i!= 1 && doubleCache[coordonnee[s],coordonnee[s+1]] != doubleCache[coordonnee[s-2],coordonnee[s-1]])
         {
