@@ -10,7 +10,7 @@
         MiseAJourTableau(doubleVisible);
         ancienCoordonnee[0]= coordonnee[0];
         ancienCoordonnee[1] = coordonnee[1];
-        ChoixCarte(coordonnee);
+        ChoixCarte(coordonnee, doubleCache, doubleVisible);
         doubleVisible[coordonnee[0],coordonnee[1]] = doubleCache[coordonnee[0],coordonnee[1]];
         MiseAJourTableau(doubleVisible);
 
