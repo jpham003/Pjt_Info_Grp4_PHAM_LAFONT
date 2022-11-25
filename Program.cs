@@ -21,11 +21,7 @@
 
         i++;
     }
-
-    if (perdu == false)
-    {
-
-    }
+    //commencer nouveau tour dans le main
 
 }
 
