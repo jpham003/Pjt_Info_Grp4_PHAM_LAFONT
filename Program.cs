@@ -3,7 +3,7 @@
     int i =1;
     int[] coordonnee = new int[2];
     int[] ancienCoordonnee = new int[2];
-    ChoixCarte(coordonnee);
+    ChoixCarte(coordonnee, doubleCache, doubleVisible);
     while(i <= n && perdu == false)
     {
         doubleVisible[coordonnee[0],coordonnee[1]] = doubleCache[coordonnee[0],coordonnee[1]];
