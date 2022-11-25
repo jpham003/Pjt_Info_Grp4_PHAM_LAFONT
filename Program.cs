@@ -19,19 +19,28 @@ char GenererCaractereAleatoire()
 {
     Random rnd = new Random();
     char[] listCaracteres = new char[62];
-    for (int i = 0; i > 10; i++)
-        for (int j = 48; j > 58; j++)
-            listCaracteres[i] = Convert.ToChar(j);
-    for (int i = 10; i > 36; i++)
-        for (int j = 65; j > 91; j++)
-            listCaracteres[i] = Convert.ToChar(j);
-    for (int i = 36; i > listCaracteres.Length; i++)
-        for (int j = 97; j > 123; j++)
-            listCaracteres[i] = Convert.ToChar(j);
+    int j = 48;
+    int k = 65;
+    int l = 97;
+    for (int i = 0; i < 10; i++)
+    {
+        listCaracteres[i] = Convert.ToChar(j);
+        j++;
+    }
+    for (int i = 10; i < 36; i++)
+    {
+        listCaracteres[i] = Convert.ToChar(k);
+        k++;
+    }
+    for (int i = 36; i < listCaracteres.Length; i++)
+    {
+        listCaracteres[i] = Convert.ToChar(l);
+        l++;
+    }
     int cIndex = rnd.Next(listCaracteres.Length);
     return listCaracteres[cIndex];
 }
 
-
+Console.WriteLine(GenererCaractereAleatoire());
 
 
