@@ -44,3 +44,4 @@ char GenererCaractereAleatoire()
 Console.WriteLine(GenererCaractereAleatoire());
 
 
+
