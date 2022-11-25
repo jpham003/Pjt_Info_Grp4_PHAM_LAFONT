@@ -1,31 +1,8 @@
-﻿void Tour(int n, char[,]doubleCache, char[,]doubleVisible ) // n représente le nombre de uplet
+﻿void Echec(int[]tab, char[,]doubleVisible) // tab n'est plus le tableau avec le coordonnée d'une carte mais de TOUTe les cartes retournées dans le tour!
 {
-    int i =1;
-    int[] coordonnee = new int[2];
-    int[] ancienCoordonnee = new int[2];
-    ChoixCarte(coordonnee);
-    while(i <= n && perdu == false)
+    for(int i = 0; i< tab.Length; i=i+2)
     {
-        doubleVisible[coordonnee[0],coordonnee[1]] = doubleCache[coordonnee[0],coordonnee[1]];
-        MiseAJourTableau(doubleVisible);
-        ancienCoordonnee[0]= coordonnee[0];
-        ancienCoordonnee[1] = coordonnee[1];
-        ChoixCarte(coordonnee);
-        doubleVisible[coordonnee[0],coordonnee[1]] = doubleCache[coordonnee[0],coordonnee[1]];
-        MiseAJourTableau(doubleVisible);
-
-        if(doubleCache[coordonnee[0],coordonnee[1]] =! doubleCache[ancienCoordonnee[0],ancienCoordonnee[1]])
-        {
-            Echec(coordonnee, ancienCoordonnee);  // configurer fonction echec
-        }
-
-        i++;
-    }
-
-    if (perdu == false)
-    {
-
-    }
-
+        doubleVisible[tab[i],tab[i+1]]= "*";
+    }      
 }
 
